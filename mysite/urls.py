@@ -20,6 +20,8 @@ from usersapp.views import NotetList
 urlpatterns = [
     path('my/v1/admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('NoteList/', NotetList.as_view(), name='note')
+    path('NoteList/', NotetList.as_view(), name='note'),
+    path('NoteList/<int:pk>/', NotetList.as_view(), name='note')
+
     
 ]
