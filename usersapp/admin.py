@@ -3,3 +3,5 @@ from usersapp.models import *
 # Register your models here.
 admin.site.register(note)
 admin.site.register(myuser)
+admin.site.register(User)
+

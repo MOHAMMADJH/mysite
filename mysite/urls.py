@@ -15,13 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from usersapp.views import NotetList
+from usersapp.views import NotetList, UserList
+
+
 
 urlpatterns = [
     path('my/v1/admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('NoteList/', NotetList.as_view(), name='note'),
-    path('NoteList/<int:pk>/', NotetList.as_view(), name='note')
+    path('NoteList/<int:pk>/', NotetList.as_view(), name='note'),
+    path('usersList/',UserList.as_view(), name='user list'),
+
+    path('api/user/', include('usersapp.urls')),
+
 
     
 ]

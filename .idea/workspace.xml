@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a66e17-28c5-4b78-8eda-435779f3b65e" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usersapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/usersapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usersapp/views.py" afterDir="false" />
+    <list default="true" id="79a66e17-28c5-4b78-8eda-435779f3b65e" name="Changes" comment="l-4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -86,7 +84,7 @@
       <workItem from="1659160867200" duration="2334000" />
       <workItem from="1659195971578" duration="2075000" />
       <workItem from="1659248935477" duration="3375000" />
-      <workItem from="1659458699960" duration="3329000" />
+      <workItem from="1659458699960" duration="4034000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1659203897855</created>
@@ -95,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659203897856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="l-4">
+      <created>1659463043566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659463043566</updated>
+    </task>
+    <task id="LOCAL-00003" summary="l-4">
+      <created>1659463060211</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659463060211</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,7 +118,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="L-4" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -114,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="l-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="l-4" />
   </component>
 </project>

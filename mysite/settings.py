@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,10 +37,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'usersapp',
-
+    'rest_framework.authtoken',
     'rest_framework',
 
+
+    # JWT APPS
+
+    "rest_framework_simplejwt.token_blacklist",
+    'djoser',
+    'rest_framework_simplejwt',
+
 ]
+
+
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,6 +84,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
+
+
+
 
 # REST_FRAMEWORK = {
 #     # Use Django's standard `django.contrib.auth` permissions,
@@ -134,3 +150,63 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.AllowAny",
+    ),
+}
+
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('JWT',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=100),
+    'REFRESH_TOKEN_LIFETIME': timedelta(minutes=360),
+}
+
+DJOSER = {
+    'SEND_CONFIRMATION_EMAIL': True,
+    'LOGIN_FIELD': 'email',
+    'SET_PASSWORD_RETYPE': True,
+    'PASSWORD_RESET_CONFIRM_RETYPE': True,
+    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
+    'SEND_ACTIVATION_EMAIL': True,
+    'HIDE_USERS': False,
+    'SERIALIZERS': {
+        'user': 'usersapp.serializers.ReadUserSerializer',
+        # 'user': 'djoser.serializers.UserSerializer',
+
+        # 'user_create': 'djoser.serializers.UserCreateSerializer',
+        'user_create': 'usersapp.serializers.UserRegistrationSerializer',
+        'user_delete': 'djoser.serializers.UserDeleteSerializer',
+        'current_user': 'djoser.serializers.UserSerializer', # Get own user data.
+        'password_reset': 'djoser.serializers.SendEmailResetSerializer',
+        'password_reset_confirm': 'djoser.serializers.PasswordResetConfirmSerializer',
+        'password_reset_confirm_retype': 'djoser.serializers.PasswordResetConfirmRetypeSerializer',
+        'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
+
+        
+        'token': 'djoser.serializers.TokenSerializer',
+        'token_create': 'djoser.serializers.TokenCreateSerializer',
+    },
+    'PERMISSIONS': {
+        'activation': ['rest_framework.permissions.AllowAny'],
+        
+        # 'set_password': ['rest_framework.permissions.CurrentUserOrAdmin'],
+        
+        # 'set_username': ['rest_framework.permissions.CurrentUserOrAdmin'],
+        # 'user_delete': ['rest_framework.permissions.CurrentUserOrAdmin'],
+        # 'user': ['rest_framework.permissions.CurrentUserOrAdmin'],
+        # 'user': ['rest_framework.permissions.AllowAny'],
+        'user_list': ['rest_framework.permissions.IsAdminUser'],
+        'token_create': ['rest_framework.permissions.AllowAny'],
+        'token_destroy': ['rest_framework.permissions.IsAuthenticated'],
+    }
+}

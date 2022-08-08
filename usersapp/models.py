@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.db import models
 import uuid
 
@@ -9,6 +8,7 @@ from django.contrib.auth.models import (
     BaseUserManager,
     PermissionsMixin,
 )
+from mysite.settings import AUTH_USER_MODEL
 
 class UserManager(BaseUserManager):
 
@@ -49,8 +49,10 @@ class note(models.Model):
     """
       class Note models field
     """
+    #user = models.ForeignKey(AUTH_USER_MODEL ,on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User,  on_delete=models.CASCADE, null=True)
 
-    note_id = models.UUIDField(default=uuid.uuid4, editable=False)
+    note_id = models.UUIDField(default=uuid.uuid4, editable=False, )
     note = models.TextField()
     # key = models.CharField(max_length=250, blank=True)
     email = models.EmailField(null=True, max_length=200, blank=True)
@@ -61,7 +63,7 @@ class note(models.Model):
     is_d = models.BooleanField(null=True, default=False)
 
     def __str__(self):
-        return str(self.email)
+        return str(self.user)
 
 
   
