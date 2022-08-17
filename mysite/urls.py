@@ -28,6 +28,7 @@ urlpatterns = [
 
     path('api/user/', include('usersapp.urls')),
 
-
+    # add movie app urls
+    path('api/movie/',include('movie_app.api.urls')), 
     
 ]

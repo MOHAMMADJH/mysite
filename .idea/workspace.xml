@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79a66e17-28c5-4b78-8eda-435779f3b65e" name="Changes" comment="l-4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="79a66e17-28c5-4b78-8eda-435779f3b65e" name="Changes" comment="JWT urls file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +83,7 @@
       <workItem from="1659195971578" duration="2075000" />
       <workItem from="1659248935477" duration="3375000" />
       <workItem from="1659458699960" duration="4034000" />
+      <workItem from="1659975458006" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1659203897855</created>
@@ -107,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659463060211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JWT">
+      <created>1659975507741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659975507741</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JWT urls file">
+      <created>1659975804796</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659975804796</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +137,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="L-4" />
+                        <option value="L-5-User-and-JWT" />
                       </list>
                     </value>
                   </entry>
@@ -139,6 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
     <MESSAGE value="l-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="l-4" />
+    <MESSAGE value="JWT" />
+    <MESSAGE value="JWT urls file" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT urls file" />
   </component>
 </project>

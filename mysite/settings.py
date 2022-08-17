@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'usersapp',
     'rest_framework.authtoken',
     'rest_framework',
+    'movie_app',
 
 
     # JWT APPS
